@@ -8,42 +8,44 @@
 
 #include <iostream>
 #include <string>
+
+// No longer need to include std ahead of lines
 using namespace std;
 
 int main() {
 
-	// Array to hold final concatenated sentence
-	std::string dayAtTheZoo{};
+	// String to hold final concatenated sentence
+	string dayAtTheZoo{};
 
-	// Prompt user to enter an animal they will visit at the zoo
-	std::cout << "Enter an animal you will visit at the zoo: ";
+	// Add a loop to prompt the user three times and produce output each time
+	for (int i = 0; i < 3; i++) {
+		// Track which round of animals the visitor is on
+		cout << "\nVisit round number: " << i + 1 << "\n";
 
-	// Store user input
-	std::string animal1{};
+		// Prompt user to enter an animal they will visit at the zoo
+		cout << "Enter an animal you will visit at the zoo: ";
 
-	// Read in user input
-	std::getline(std::cin >> std::ws, animal1);
+		// Store user input
+		string animal1{};
 
-	// Prompt user to enter another animal
-	std::cout << "Enter another animal you will visit: ";
+		// Read in user input
+		getline(cin >> ws, animal1);
 
-	// Store user input
-	std::string animal2{};
+		// Prompt user to enter another animal
+		cout << "Enter another animal you will visit: ";
 
-	// Read in user input
-	std::getline(std::cin >> std::ws, animal2);
+		// Store user input
+		string animal2{};
 
-	// Add final content to dayAtTheZoo using concatenation
-	dayAtTheZoo = "Animals you will visit are " + animal1 + " and " + animal2 + ".";
+		// Read in user input
+		getline(cin >> ws, animal2);
 
-//	dayAtTheZoo = "Animals you will visit are ";
-//	dayAtTheZoo += animal1;
-//	dayAtTheZoo.append(" and ");
-//	dayAtTheZoo += animal2;
-//	dayAtTheZoo += ".";
+		// Add final content to dayAtTheZoo using concatenation
+		dayAtTheZoo = "Animals you will visit this round are " + animal1 + " and " + animal2 + ".\n";
 
-	// Output the content
-	std::cout << dayAtTheZoo;
+		// Output the content
+		cout << dayAtTheZoo;
+	}
 
 	return 0;
 }
