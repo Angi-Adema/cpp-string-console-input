@@ -1,0 +1,28 @@
+# Eclipse files
+.project
+.cproject
+.settings/
+
+# Build folders
+Debug/
+Release/
+build/
+bin/
+
+# Compiled files
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+
+# Temporary/editor files
+*.log
+*.tmp
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
